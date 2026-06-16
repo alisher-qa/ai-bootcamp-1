@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "tms": {
+      "command": "node",
+      "args": [
+        "--loader",
+        "ts-node/esm",
+        "tms_mcp_server.ts"
+      ],
+      "description": "Test Management System MCP server for retrieving test case steps and requirements",
+      "env": {
+        "NODE_OPTIONS": "--loader ts-node/esm"
+      }
+    }
+  }
+}

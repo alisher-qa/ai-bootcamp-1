@@ -1,0 +1,41 @@
+{
+  "name": "qa-automation-workshop",
+  "version": "1.0.0",
+  "description": "Service-Driven Development & Autonomous Agents Workshop for QA Automation",
+  "type": "module",
+  "main": "tms_mcp_server.ts",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed",
+    "test:specific": "playwright test bad_test.spec.ts",
+    "mcp:tms": "node --loader ts-node/esm tms_mcp_server.ts",
+    "mcp:tms:dev": "node --loader ts-node/esm --inspect tms_mcp_server.ts",
+    "build": "tsc --noEmit",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"**/*.ts\""
+  },
+  "keywords": [
+    "automation",
+    "testing",
+    "playwright",
+    "qa",
+    "mcp",
+    "service-driven-development"
+  ],
+  "author": "QA Automation Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
